@@ -1,0 +1,82 @@
+.App {
+  height: 100vh; /* Chiều cao toàn màn hình */
+}
+
+.main-container {
+  display: flex; /* Sử dụng Flexbox */
+  height: 100%; /* Đảm bảo toàn bộ container chiếm hết chiều cao */
+}
+
+.sidebar {
+  width: 200px; /* Chiều rộng của sidebar */
+  background-color: #f0f2f5; /* Màu nền sidebar */
+  display: flex;
+  flex-direction: column; /* Đảm bảo các phần tử bên trong sidebar xếp dọc */
+  height: 100%; /* Đảm bảo sidebar kéo dài theo chiều cao của container */
+}
+
+.content {
+  flex: 1; /* Để phần content chiếm hết không gian còn lại */
+  padding: 20px; /* Khoảng cách trong */
+  overflow-y: auto; /* Thanh cuộn dọc nếu nội dung quá dài */
+}
+
+
+.content > * {
+  width: 100%;
+
+  object-fit: contain; /* Giữ tỉ lệ nội dung và thu nhỏ để vừa khung */
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.column {
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
